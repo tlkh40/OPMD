@@ -1,3 +1,4 @@
+// Remove this if you want to deploy this to tinkercad
 #include <Arduino.h>
 
 #include <Adafruit_NeoPixel.h>
@@ -15,14 +16,6 @@ uint32_t White = NeoPixel.Color(255, 255, 255);
 struct RawInstruction
 {
   int led;
-  uint32_t color;
-  bool isInit = false;
-};
-
-// Struct for making "RawInstructions" easier to do
-struct instruction
-{
-  Position led;
   uint32_t color;
   bool isInit = false;
 };
@@ -62,8 +55,16 @@ public:
   }
 };
 
+// Struct for making "RawInstructions" easier to do
+// i have to put it here since tinkercad doesn't like me if i don't
+struct instruction
+{
+  Position led;
+  uint32_t color;
+  bool isInit = false;
+};
 
-// class userd for storing / getting all the chracter information.
+// Class used for storing / getting all the chracter information.
 class Character
 {
 private:
@@ -124,7 +125,7 @@ public:
   }
 };
 
-// class for turning "Position" structs into "Rawinstruction" structs
+// Class for turning "Position" structs into "Rawinstruction" structs
 class Grid
 {
 public:
