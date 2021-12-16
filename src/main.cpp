@@ -2,7 +2,7 @@
 
 #include <Adafruit_NeoPixel.h>
 #define PIN 2
-#define NUMPIXELS 48
+#define NUMPIXELS 40
 
 // Random variables for doing things later on
 Adafruit_NeoPixel NeoPixel = Adafruit_NeoPixel(NUMPIXELS, PIN, NEO_GRB + NEO_KHZ800);
